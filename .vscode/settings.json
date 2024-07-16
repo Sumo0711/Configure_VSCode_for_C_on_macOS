@@ -1,0 +1,106 @@
+{
+    // settings.json 是 VS Code 的全局配置文件，用於設定各種編輯器、擴充功能和用戶自定義的設置。
+    // 這個文件位於 .vscode 資料夾中，專門針對當前工作區，也可以位於用戶配置目錄中，適用於所有工作區。
+
+    // 設定 Code Runner 插件的執行器地圖
+    "code-runner.executorMap": {
+        // 設定 C 語言的編譯和執行命令
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        // 設定 C++ 語言的編譯和執行命令
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    },
+
+    // 設定在編輯器中顯示所有的空白字符
+    "editor.renderWhitespace": "all",
+    // 設定在編輯器中高亮顯示當前行
+    "editor.renderLineHighlight": "all",
+    // 設定自動保存時格式化代碼
+    "editor.formatOnSave": true,
+    // 設定 Code Runner 插件在終端中運行代碼
+    "code-runner.runInTerminal": true,
+    // 設定 Code Runner 插件忽略選中的代碼，運行整個文件
+    "code-runner.ignoreSelection": true,
+    // 設定禁用 Code Runner 插件的應用洞察
+    "code-runner.enableAppInsights": false,
+    // 設定 C/C++ 擴充功能的更新頻道為 Insiders
+    "C_Cpp.updateChannel": "Insiders",
+
+    // 設定 Makefile 文件的編輯器選項，插入空格而不是 Tab
+    "[makefile]": {
+        "editor.insertSpaces": true
+    },
+
+    // 設定 C/C++ 預設的包含路徑
+    "C_Cpp.default.includePath": [
+        "/usr/local/opt/opencv@3/include"
+    ],
+
+    // 設定終端中使用的字體大小
+    "terminal.integrated.fontSize": 15,
+
+    // 設定文件關聯，將特定的標頭文件關聯為 C++ 語言
+    "files.associations": {
+        "iomanip": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "bitset": "cpp",
+        "vector": "cpp",
+        "stdexcept": "cpp",
+        "iosfwd": "cpp",
+        "ctime": "cpp",
+        "ratio": "cpp",
+        "cmath": "cpp",
+        "ios": "cpp",
+        "__locale": "cpp",
+        "array": "cpp",
+        "cctype": "cpp",
+        "typeinfo": "cpp",
+        "string": "cpp",
+        "istream": "cpp",
+        "string_view": "cpp",
+        "fstream": "cpp",
+        "new": "cpp",
+        "__bit_reference": "cpp",
+        "__node_handle": "cpp",
+        "atomic": "cpp",
+        "__memory": "cpp",
+        "limits": "cpp",
+        "locale": "cpp",
+        "optional": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "__config": "cpp",
+        "__debug": "cpp",
+        "__errc": "cpp",
+        "__hash_table": "cpp",
+        "__mutex_base": "cpp",
+        "__split_buffer": "cpp",
+        "__threading_support": "cpp",
+        "__verbose_abort": "cpp",
+        "charconv": "cpp",
+        "clocale": "cpp",
+        "complex": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "cstring": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "mutex": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "unordered_map": "cpp",
+        "variant": "cpp",
+        "algorithm": "cpp"
+    },
+
+    // 啟用 C/C++ 的錯誤波浪線提示
+    "C_Cpp.errorSquiggles": "enabled",
+
+    // 設定預設的格式化工具為 ms-vscode.cpptools
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+}

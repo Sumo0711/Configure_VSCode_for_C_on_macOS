@@ -1,0 +1,27 @@
+{
+    // c_cpp_properties.json 是 VS Code 中 C/C++ 擴充功能使用的一個配置文件，用於設定 IntelliSense（代碼補全、錯誤檢查等）和其他 C/C++ 特定的功能。
+    // 該文件可以定義包括編譯器路徑、標頭檔案位置和 IntelliSense 模式等配置，以便於更好地支援 C/C++ 開發。
+    "configurations": [
+        {
+            "name": "Mac",  // 配置名稱，可以自定義為其他名稱
+            "defines": [],  // 定義預處理器宏，這裡為空
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",  // 系統框架路徑
+                "/Library/Frameworks",         // 用戶框架路徑
+                "${workspaceFolder}/**"        // 當前工作區的所有子目錄
+            ],
+            "compilerPath": "/usr/bin/clang",  // 編譯器路徑，這裡使用的是 clang 編譯器
+            "cStandard": "c11",                // 設定 C 語言標準版本為 c11
+            "cppStandard": "c++17",            // 設定 C++ 語言標準版本為 c++17
+            "intelliSenseMode": "clang-x64",   // 設定 IntelliSense 模式為 clang-x64
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"  // 設定符號瀏覽的路徑，這裡為當前工作區
+                ],
+                "limitSymbolsToIncludedHeaders": true,  // 限制符號僅包含在包含的頭文件中
+                "databaseFilename": ""  // 符號數據庫文件名，這裡為空表示使用默認值
+            }
+        }
+    ],
+    "version": 4  // 配置文件的版本號
+}

@@ -1,0 +1,20 @@
+{
+    // launch.json 定義了如何偵錯你的 C++ 程式。
+    // 欲了解更多信息，請訪問: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0", // 配置文件的版本號
+    "configurations": [
+        {
+            "name": "(lldb) Launch", // 配置的名稱，可以自定義為其他名稱
+            "type": "lldb", // 調試器的類型，這裡使用的是 LLDB
+            "request": "launch", // 請求類型，這裡是啟動配置
+            "program": "${fileDirname}/${fileBasenameNoExtension}.out", // 要調試的程序路徑，這裡使用生成的可執行文件
+            "args": [], // 傳遞給程序的參數，這裡為空
+            "cwd": "${workspaceFolder}", // 設定調試時的工作目錄
+            "stopAtEntry": true, // 如果設為 true，則在主入口（函數）處停下
+            "environment": [], // 調試時的環境變量，這裡為空
+            "externalConsole": false, // 是否使用外部控制台，這裡設為 false 表示不使用
+            "MIMode": "lldb", // 使用的 MI（機械介面）模式，這裡是 LLDB
+            "preLaunchTask": "C/C++: clang++ build" // 調試前執行的任務，這裡是編譯任務
+        }
+    ]
+}
